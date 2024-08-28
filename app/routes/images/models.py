@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, BigInteger, Boolean
-from api.database import Base
+from app.database import Base
 from pgvector.sqlalchemy import Vector
 import os
 import random

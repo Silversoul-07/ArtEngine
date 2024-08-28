@@ -2,9 +2,9 @@ from fastapi import Depends, File, UploadFile, Form, APIRouter, HTTPException
 from sqlalchemy.orm import Session
 from io import BytesIO
 from PIL import Image
-import api.routes.images.schemas as schemas
-from api.routes.images.utils import *
-from api.routes.images.crud import *
+import app.routes.images.schemas as schemas
+from app.routes.images.utils import *
+from app.routes.images.crud import *
 from typing import List
 import os
 import asyncio

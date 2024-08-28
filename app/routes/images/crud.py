@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 import numpy as np
-from api.routes.images.models import Images, Embeddings
-import api.routes.images.schemas as schemas
+from app.routes.images.models import Images, Embeddings
+import app.routes.images.schemas as schemas
 from scipy.spatial.distance import cosine
 from typing import List
 from sqlalchemy.sql import func

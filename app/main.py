@@ -21,10 +21,10 @@ class DriveNotMounted(Exception):
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from api.database import Base, engine
+from app.database import Base, engine
 from fastapi.middleware.cors import CORSMiddleware
-from api.routes.users.route import router as users_router
-from api.routes.images.route import router as images_router
+from app.routes.users.route import router as users_router
+from app.routes.images.route import router as images_router
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
@@ -46,7 +46,7 @@ app.mount("/media", StaticFiles(directory=STORAGE_DIR), name="public")
 
 Base.metadata.create_all(bind=engine)
 
-templates = Jinja2Templates(directory="api/templates")
+templates = Jinja2Templates(directory="app/templates")
 
 @app.get("/status")
 

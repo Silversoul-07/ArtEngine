@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from api.routes.users.models import Users
+from app.routes.users.models import Users
 
 def create_user(db: Session,name:str,email:str,password:str,image:str):
     db_user = Users(

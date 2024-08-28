@@ -1,7 +1,7 @@
 from PIL import Image
 import hashlib
 import torch
-from api.database import SessionLocal
+from app.database import SessionLocal
 from transformers import CLIPProcessor, CLIPModel
 
 
