@@ -11,19 +11,20 @@ class Images(Base):
     id = Column(BigInteger, primary_key=True, index=True)
     url = Column(String(64))
     title = Column(String(255))
+    desc = Column(String(255))
     hash = Column(String(64), unique=True)
     is_nsfw = Column(Boolean, default=False)
     user_id = Column(Integer)
 
     def __init__(self, url, title, hash, user_id):
-        self.id = self.generate_random_id()
+        self.id = self.generate_id()
         self.url = self.get_url(url)
         self.title = title
         self.hash = hash
         self.user_id = user_id
 
     @staticmethod
-    def generate_random_id():
+    def generate_id():
         return random.randint(10**15, 10**16 - 1)
 
     @staticmethod

@@ -3,9 +3,6 @@ from dotenv import load_dotenv
 import logging
 import sys
 
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
-
 load_dotenv()
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, format='%(levelname)s:     %(message)s')
