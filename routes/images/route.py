@@ -23,6 +23,7 @@ async def create_image(
     token: str = Depends(oauth2_scheme)
 ): 
     try:
+        // TODO Separate logic for Writing Image to Folder
         payload = jwt.decode(token, SECRET_KEY, algorithms=[algorithm])
         user_id: str = payload.get("sub")
         if user_id is None:
