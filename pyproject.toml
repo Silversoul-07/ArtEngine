@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "artengine"
+version = "0.1.0"
+description = "Backend for the Project ArtVerse"
+authors = ["praveen <praveenkumar.e2022@vitstudent.ac.in>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
